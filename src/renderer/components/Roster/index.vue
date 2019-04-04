@@ -5,7 +5,7 @@
     <div class="wrapper">
 
     <!-- Sidebar -->
-    <sidebar ref="sidebar" />
+    <!-- <sidebar ref="sidebar" /> -->
 
     <!-- Page Content -->
     <router-view class="pt-5"></router-view>
@@ -47,28 +47,18 @@
 </script>
 
 <style scoped>
-  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
   body { 
-    font-family: 'Source Sans Pro', sans-serif; 
     overflow: hidden;
   }
 
   .wrapper {
     display: flex;
     width: 100%;
-}
+  }
 </style>
 
 <style>
   .roster-content {
-    margin-left: 80px;
     margin-right: 0;
     width: 100vw;
     overflow-y: scroll;

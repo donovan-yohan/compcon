@@ -17,6 +17,10 @@ export default new Router({
       children: [
         {
           path: '',
+          component: require('@/components/Roster/RosterView').default
+        },
+        {
+          path: '/player',
           component: require('@/components/Roster/PilotSheet/index').default
         },
         {
