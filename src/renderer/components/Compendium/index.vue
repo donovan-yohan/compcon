@@ -15,7 +15,8 @@
 </template>
 
 <script>
-  import {Topbar, Sidebar} from './UI'
+  import {Sidebar} from './UI'
+  import {Topbar} from '../Roster/UI'
   // import PilotSheet from './PilotSheet/'
   // import ConfigSheet from './ConfigSheet/'
 

@@ -102,6 +102,9 @@
             </v-dialog>
           </v-flex>
         </v-layout>
+        <v-layout class="ml-4 mr-4 mt-2">
+          <v-btn block class="ma-2" outline color="primary">Mech Hangar</v-btn>
+        </v-layout>
         <v-layout>
           <v-flex xs8>
             <v-layout>
