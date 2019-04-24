@@ -7,7 +7,19 @@
         </div>
         <p v-if="itemData.description" v-html="itemData.description" class="fluff-text" />
         <p class="effect-text font-weight-bold">{{itemData.type}} ({{itemData.sp}} SP)</p>
-        <p v-if="itemData.effect" v-html="itemData.effect" class="pl-2 effect-text"/>
+        <p v-if="itemData.effect" v-html="itemData.effect" class="pl-1 ml-1 pb-1 mb-1 effect-text"/>
+        <div v-if="itemData.actions">
+          <div v-for="a in itemData.actions" :key="a.name" class="ma-1 pl-2 effect-text">
+            <span class="font-weight-bold">{{a.name}}</span> 
+            <span class="font-weight-light text-capitalize">&nbsp; // &nbsp; {{a.action}} Action </span>
+            <br>
+            <span>{{a.effect}}</span> 
+            <br>
+            <v-layout class="pb-2">
+              <item-tag v-for="at in a.tags" :key="at.id" :tag-obj="at" />
+            </v-layout>
+          </div>
+        </div>
         <v-layout class="pb-2">
           <item-tag v-for="t in itemData.tags" :key="t.id" :tag-obj="t"/>
         </v-layout>

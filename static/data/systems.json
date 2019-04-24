@@ -14,7 +14,28 @@
     "source": "GMS",
     "license": "",
     "license_level": "",
-    "effect": "You may expend a charge from this system for one of the following effects:<br><b>Smoke Charge</b> <i>(Grenade, Range 5, Blast 2):</i> The blast area grants soft cover to all characters and objects inside.Lasts until the end of your next turn, then disperses.<br><b>Shroud Mine</b> <i>(Mine, Burst 3)</i>: This mine detonates when any allied character moves over or adjacent to it. The affected area becomes soft cover for all characters and objects within. Lasts until the end of the activating character's turn, then disperses.",
+    "effect": "You may expend a charge from this system for one of the following effects:",
+    "actions": [
+      {
+        "action": "quick",
+        "name": "Smoke Charge",
+        "effect": "The blast area grants soft cover to all characters and objects inside. Lasts until the end of your next turn, then disperses.",
+        "tags": [
+          {"id": "grenade"},
+          {"id": "range","val": 5},
+          {"id": "burst","val": 3}
+        ]
+      },
+      {
+        "action": "quick",
+        "name": "Shroud Mine",
+        "effect": "This mine detonates when any allied character moves over or adjacent to it. The affected area becomes soft cover for all characters and objects within. Lasts until the end of the activating character's turn, then disperses.",
+        "tags": [
+          {"id": "mine"},
+          {"id": "burst","val": 3}
+        ]
+      }
+    ],
     "description": "",
     "data_type": "system",
     "aptitude": {
@@ -38,7 +59,28 @@
     "source": "GMS",
     "license": "",
     "license_level": "",
-    "effect": "You may expend a charge from this system for one of the following effects:<br><b>Frag Grenade</b> <i>(Grenade, Range 5, Blast 1):</i> Affected characters must pass an agility save or take 1d6 explosive damage, and half on a successful save <b>Explosive Mine</b> <i>(Mine, Burst 1)</i>: Affected characters must pass an agility save or take 2d6 explosive damage, and half on a successful save.",
+    "effect": "You may expend a charge from this system for one of the following effects:",
+    "actions": [
+      {
+        "action": "quick",
+        "name": "Frag Grenade",
+        "effect": "Affected characters must pass an agility save or take 1d6 explosive damage, and half on a successful save.",
+        "tags": [
+          {"id": "grenade"},
+          {"id": "range","val": 5},
+          {"id": "blast","val": 1}
+        ]
+      },
+      {
+        "action": "quick",
+        "name": "Explosive Mine",
+        "effect": "Affected characters must pass an agility save or take 2d6 explosive damage, and half on a successful save.",
+        "tags": [
+          {"id": "mine"},
+          {"id": "burst","val": 1}
+        ]
+      }
+    ],    
     "description": "",
     "data_type": "system",
     "aptitude": {
@@ -51,9 +93,7 @@
     "name": "GMS Pattern A \"Jericho\" Deployable Cover",
     "type": "Deployable",
     "sp": 2,
-    "tags": [{
-        "id": "quickaction"
-      },
+    "tags": [
       {
         "id": "deployable"
       }
@@ -61,7 +101,19 @@
     "source": "GMS",
     "license": "",
     "license_level": "",
-    "effect": "Using this system creates two sections of size 1 Hard cover adjacent to the user (in any orientation, as long as there is free space). Requires a full action to pick up. Reusable. Each section of cover has 5 Evasion, 10 HP, and can be targeted and destroyed. A mech can spend 1 repair during a rest to repair it to full HP.",
+    "effect": "You may expend a charge from this system for the following effect:",
+    "actions": [
+      {
+        "action": "quick",
+        "name": "Activate System",
+        "effect": "Create two sections of size 1 Hard cover adjacent to the user (in any orientation, as long as there is free space). Requires a full action to pick up. Reusable. Each section of cover has 5 Evasion, 10 HP, and can be targeted and destroyed. A mech can spend 1 repair during a rest to repair it to full HP.",
+        "tags": [
+          { "id": "grenade" },
+          { "id": "range", "val": 5 },
+          { "id": "blast", "val": 1 }
+        ]
+      }
+    ],
     "description": "",
     "data_type": "system",
     "aptitude": {
