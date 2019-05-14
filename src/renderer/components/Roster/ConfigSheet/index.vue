@@ -1,6 +1,6 @@
 <template>
   <div id="config-sheet" class="roster-content">
-    
+
     <empty-view v-if="frame.err">
       <div slot="contents">
         <p class="grey--text text-xs-center display-2">// MISSING FRAME DATA //</p><br>
@@ -108,17 +108,17 @@
                 <v-flex>
                   <v-layout>
                     <v-flex shrink>
-                      <span class="grey--text">STRUCTURE 
+                      <span class="grey--text">STRUCTURE
                         <b :style="`color: ${color.structure.dark}`">{{stats.structure}}</b>
                       </span>
-                      <v-rating v-model="stats.structure" :length="stats.structure" readonly large dense full-icon="blur_circular" color="pink accent-3"/>
+                      <v-rating v-model="stats.structure" :length="stats.structure" large dense full-icon="blur_circular" color="pink accent-3"/>
                     </v-flex>
                     <v-flex>
-                      <span class="grey--text"> 
-                        &nbsp;HP <b :style="`color: ${color.hp.dark}`">{{stats.hp}}</b> 
+                      <span class="grey--text">
+                        &nbsp;HP <b :style="`color: ${color.hp.dark}`">{{stats.hp}}</b>
                         &emsp; ARMOR <b :style="`color: ${color.armor.dark}`">{{stats.armor}}</b>
                       </span>
-                      <v-rating v-model="stats.hp" :length="stats.hp + stats.armor" readonly large dense empty-icon="brightness_7" full-icon="brightness_1" color="white"/>
+                      <v-rating v-model="stats.hp" :length="stats.hp + stats.armor" large dense empty-icon="brightness_7" full-icon="brightness_1" color="white"/>
                     </v-flex>
                   </v-layout>
                 </v-flex>
@@ -129,16 +129,16 @@
                   <v-layout>
                     <v-flex shrink>
                       <span class="grey--text">REACTOR STRESS <b :style="`color: ${color.stress.dark}`">{{stats.heatstress}}</b></span>
-                      <v-rating v-model="stats.heatstress" :length="stats.heatstress" readonly large dense full-icon="blur_circular" color="deep-orange accent-3"/>
+                      <v-rating v-model="stats.heatstress" :length="stats.heatstress" large dense full-icon="blur_circular" color="deep-orange accent-3"/>
                     </v-flex>
                     <v-flex>
                       <span class="grey--text"> &nbsp;HEAT CAPACITY <b :style="`color: ${color.heatcap.dark}`">{{stats.heatcap}}</b></span>
-                      <v-rating v-model="stats.heatcap" :length="stats.heatcap" readonly large dense full-icon="brightness_1" color="orange lighten-3"/>
+                      <v-rating v-model="stats.heatcap" :length="stats.heatcap" large dense full-icon="brightness_1" color="orange lighten-3"/>
                     </v-flex>
                     <v-spacer />
                       <v-flex>
                       <span class="grey--text"> &nbsp;REPAIR CAPACITY <b :style="`color: ${color.repcap.dark}`">{{stats.repcap}}</b></span>
-                      <v-rating v-model="stats.repcap" :length="stats.repcap" readonly large dense full-icon="control_point" color="grey lighten-2"/>
+                      <v-rating v-model="stats.repcap" :length="stats.repcap" large dense full-icon="control_point" color="grey lighten-2"/>
                     </v-flex>
                   </v-layout>
                 </v-flex>
